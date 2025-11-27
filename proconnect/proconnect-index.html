@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proconnect - Professional Networking Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        .gradient-nav {
+            background: linear-gradient(to right, #E3F2FD, #FFF3E0);
+        }
+        .gradient-hero {
+            background: linear-gradient(to right, #2563EB, #F97316);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 gradient-nav border-b border-blue-100 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
+                        <span class="text-xl font-bold text-white">P</span>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent">
+                        Proconnect
+                    </span>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="px-4 py-2 rounded-lg text-sm font-medium bg-white text-blue-600 shadow-sm">Home</a>
+                    <a href="#discover" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-white/50 hover:text-blue-600">Discover</a>
+                    <a href="#showcase" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-white/50 hover:text-blue-600">Showcase</a>
+                    <a href="#missions" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-white/50 hover:text-blue-600">Missions</a>
+                    <a href="#build" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-white/50 hover:text-blue-600">Build</a>
+                    <a href="#co-lab" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-white/50 hover:text-blue-600">Co-Lab</a>
+                    <a href="#mentorship" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-white/50 hover:text-blue-600">Mentorship</a>
+                    <a href="#pulse" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-white/50 hover:text-blue-600">Pulse</a>
+                    <a href="#inbox" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-white/50 hover:text-blue-600">Inbox</a>
+                    <a href="#profile" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-white/50 hover:text-blue-600">Profile</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex items-center space-x-2 bg-white rounded-lg px-3 py-2 border border-gray-200">
+                        <i class="fas fa-search text-gray-400"></i>
+                        <input type="text" placeholder="Search..." class="outline-none text-sm w-64">
+                    </div>
+                    <a href="login.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-hero text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-6">Connect with Tech Professionals</h1>
+            <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+                The ultimate networking platform for software engineers, founders, AI/ML researchers, 
+                data scientists, designers, and tech creators.
+            </p>
+            <div class="flex items-center justify-center space-x-4">
+                <a href="signup.html" class="px-8 py-3 bg-white text-blue-600 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Get Started
+                </a>
+                <a href="#features" class="px-8 py-3 border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white/10 transition-colors">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Platform Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Home Feed</h3>
+                    <p class="text-gray-600">Share professional insights and connect with your network through Zeets</p>
+                </div>
+                <div class="p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-search text-orange-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Discover</h3>
+                    <p class="text-gray-600">Find professionals, projects, and opportunities tailored to your interests</p>
+                </div>
+                <div class="p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-trophy text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Showcase</h3>
+                    <p class="text-gray-600">Display your projects and get endorsements from the community</p>
+                </div>
+                <div class="p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-bullseye text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Missions</h3>
+                    <p class="text-gray-600">Complete challenges to earn badges, XP, and showcase expertise</p>
+                </div>
+                <div class="p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-red-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Build</h3>
+                    <p class="text-gray-600">Collaborate on projects with other professionals</p>
+                </div>
+                <div class="p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-handshake text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Co-Lab</h3>
+                    <p class="text-gray-600">Form teams and work on innovative projects together</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+            <p class="text-xl text-gray-600 mb-8">Join thousands of professionals building their careers on Proconnect</p>
+            <a href="signup.html" class="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+                Create Your Account
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="text-lg font-bold">P</span>
+                        </div>
+                        <span class="text-xl font-bold">Proconnect</span>
+                    </div>
+                    <p class="text-gray-400">Professional networking platform for tech professionals</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white">Home</a></li>
+                        <li><a href="#discover" class="hover:text-white">Discover</a></li>
+                        <li><a href="#showcase" class="hover:text-white">Showcase</a></li>
+                        <li><a href="#missions" class="hover:text-white">Missions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                        <li><a href="terms.html" class="hover:text-white">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-white">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Proconnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

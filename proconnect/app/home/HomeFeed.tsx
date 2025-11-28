@@ -29,10 +29,16 @@ interface Zeet {
     likes: number
   }
   createdAt: Date
+  isLiked?: boolean
 }
 
 export function HomeFeed({ initialZeets, userId }: { initialZeets: any[]; userId: string }) {
-  const [zeets, setZeets] = useState<Zeet[]>(initialZeets)
+  const [zeets, setZeets] = useState<Zeet[]>(
+    initialZeets.map(z => ({
+      ...z,
+      isLiked: z.likes?.some((like: any) => like.user.id === userId) || false
+    }))
+  )
   const [newZeet, setNewZeet] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -61,14 +67,25 @@ export function HomeFeed({ initialZeets, userId }: { initialZeets: any[]; userId
 
   const handleLike = async (zeetId: string) => {
     try {
+      const zeet = zeets.find(z => z.id === zeetId)
+      if (!zeet) return
+
       const response = await fetch(`/api/zeets/${zeetId}/like`, {
         method: 'POST',
       })
 
       if (response.ok) {
+        const { liked } = await response.json()
         setZeets(zeets.map(z => 
           z.id === zeetId 
-            ? { ...z, _count: { ...z._count, likes: z._count.likes + 1 } }
+            ? { 
+                ...z, 
+                isLiked: liked,
+                _count: { 
+                  ...z._count, 
+                  likes: liked ? z._count.likes + 1 : Math.max(0, z._count.likes - 1)
+                } 
+              }
             : z
         ))
       }
@@ -178,9 +195,13 @@ export function HomeFeed({ initialZeets, userId }: { initialZeets: any[]; userId
                   <div className="flex items-center space-x-6 pt-2">
                     <button 
                       onClick={() => handleLike(zeet.id)}
-                      className="flex items-center space-x-1 text-gray-600 hover:text-red-500"
+                      className={`flex items-center space-x-1 transition-colors ${
+                        zeet.isLiked 
+                          ? 'text-red-500' 
+                          : 'text-gray-600 hover:text-red-500'
+                      }`}
                     >
-                      <Heart className="h-4 w-4" />
+                      <Heart className={`h-4 w-4 ${zeet.isLiked ? 'fill-current' : ''}`} />
                       <span>{zeet._count.likes}</span>
                     </button>
                     <button className="flex items-center space-x-1 text-gray-600 hover:text-blue-500">

@@ -11,24 +11,24 @@ export async function POST(request: Request) {
 
     const { message } = await request.json()
 
-    // Groq AI API integration
-    const groqApiKey = process.env.GROQ_API_KEY
-    if (!groqApiKey) {
+    // OpenAI API integration
+    const openaiApiKey = process.env.OPENAI_API_KEY
+    if (!openaiApiKey) {
       // Fallback response if API key not configured
       return NextResponse.json({
-        response: `I understand you're asking: "${message}". To provide personalized career guidance, please configure the Groq API key in your environment variables. For now, here's some general advice: Focus on building your skills, networking with professionals in your field, and showcasing your work through projects and missions.`,
+        response: `I understand you're asking: "${message}". To provide personalized career guidance, please configure the OPENAI_API_KEY in your environment variables. For now, here's some general advice: Focus on building your skills, networking with professionals in your field, and showcasing your work through projects and missions.`,
       })
     }
 
     try {
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${groqApiKey}`,
+          'Authorization': `Bearer ${openaiApiKey}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'llama-3.1-70b-versatile',
+          model: 'gpt-4o-mini',
           messages: [
             {
               role: 'system',
@@ -52,9 +52,9 @@ export async function POST(request: Request) {
         })
       }
 
-      throw new Error('Invalid response from Groq API')
+      throw new Error('Invalid response from OpenAI API')
     } catch (apiError) {
-      console.error('Groq API error:', apiError)
+      console.error('OpenAI API error:', apiError)
       return NextResponse.json({
         response: 'I apologize, but I\'m having trouble processing your request right now. Please try again in a moment.',
       })

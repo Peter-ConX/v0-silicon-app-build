@@ -9,24 +9,30 @@ import { Search, Filter, TrendingUp, Users } from 'lucide-react'
 import { prisma } from '@/lib/prisma'
 
 async function getTrendingProfessionals() {
-  const users = await prisma.user.findMany({
-    include: {
-      profile: true,
-      _count: {
-        select: {
-          followers: true,
+  try {
+    const users = await prisma.user.findMany({
+      include: {
+        profile: true,
+        _count: {
+          select: {
+            followers: true,
+          },
         },
       },
-    },
-    orderBy: {
-      followers: {
-        _count: 'desc',
+      orderBy: {
+        followers: {
+          _count: 'desc',
+        },
       },
-    },
-    take: 4,
-  })
+      take: 4,
+    })
 
-  return users
+    return users
+  } catch (error) {
+    console.error('Error fetching trending professionals:', error)
+    // Return empty array if there's an error (e.g., table doesn't exist yet)
+    return []
+  }
 }
 
 export default async function DiscoverPage() {

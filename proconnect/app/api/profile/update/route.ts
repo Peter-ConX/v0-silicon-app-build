@@ -17,9 +17,18 @@ const updateProfileSchema = z.object({
   github: z.string().url().optional().or(z.literal('')),
   twitter: z.string().url().optional().or(z.literal('')),
   linkedin: z.string().url().optional().or(z.literal('')),
+  image: z.string().optional(), // Base64 image string
 })
 
 export async function PUT(request: Request) {
+  return handleUpdate(request)
+}
+
+export async function POST(request: Request) {
+  return handleUpdate(request)
+}
+
+async function handleUpdate(request: Request) {
   try {
     const session = await getServerSession(authOptions)
     if (!session?.user?.id) {
@@ -29,9 +38,18 @@ export async function PUT(request: Request) {
     const body = await request.json()
     const data = updateProfileSchema.parse(body)
 
-    // Clean up empty strings
+    // Handle image update separately (update User model)
+    if (data.image) {
+      await prisma.user.update({
+        where: { id: session.user.id },
+        data: { image: data.image },
+      })
+    }
+
+    // Clean up empty strings and remove image from profile data
+    const { image, ...profileData } = data
     const cleanedData = Object.fromEntries(
-      Object.entries(data).filter(([_, v]) => v !== '')
+      Object.entries(profileData).filter(([_, v]) => v !== '')
     )
 
     const profile = await prisma.profile.update({

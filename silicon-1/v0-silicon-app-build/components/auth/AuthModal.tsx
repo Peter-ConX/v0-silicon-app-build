@@ -164,4 +164,3 @@ export function AuthModal({ isOpen, onClose, action = 'continue' }: AuthModalPro
     </AnimatePresence>
   )
 }
-

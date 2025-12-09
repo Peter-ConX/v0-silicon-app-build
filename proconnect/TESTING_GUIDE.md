@@ -11,9 +11,9 @@
 
 ### Step 2: Start the Development Server
 
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 Wait for the message: `✓ Ready in X seconds`
 
@@ -248,4 +248,3 @@ The platform is working correctly if:
 5. Test different browsers
 
 Happy Testing! 🚀
-

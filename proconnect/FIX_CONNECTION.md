@@ -8,9 +8,9 @@ Direct connection (port 5432) is being blocked by Supabase. This is normal - Sup
 ### Step 1: Get Connection Pooler URL
 
 1. **Go to Supabase Dashboard:**
-   ```
+   \`\`\`
    https://supabase.com/dashboard/project/zwbvdtflhwcalbfanpyr/settings/database
-   ```
+   \`\`\`
 
 2. **Find Connection String Section:**
    - Scroll down to "Connection string"
@@ -20,9 +20,9 @@ Direct connection (port 5432) is being blocked by Supabase. This is normal - Sup
 
 4. **Copy the URI connection string**
    - It will look like:
-   ```
+   \`\`\`
    postgresql://postgres.zwbvdtflhwcalbfanpyr:[YOUR-PASSWORD]@aws-0-[REGION].pooler.supabase.com:6543/postgres?pgbouncer=true
-   ```
+   \`\`\`
 
 ### Step 2: Update .env File
 
@@ -34,9 +34,9 @@ Direct connection (port 5432) is being blocked by Supabase. This is normal - Sup
 
 ### Step 3: Test Connection
 
-```bash
+\`\`\`bash
 npm run db:push
-```
+\`\`\`
 
 ## Alternative: Check IP Allowlist
 
@@ -60,9 +60,8 @@ If you MUST use direct connection:
 
 Once you get the pooler URL from Supabase, it should be:
 
-```
+\`\`\`
 DATABASE_URL="postgresql://postgres.zwbvdtflhwcalbfanpyr:##Liverpool_2005!@aws-0-[REGION].pooler.supabase.com:6543/postgres?pgbouncer=true"
-```
+\`\`\`
 
 Replace `[REGION]` with your actual region (e.g., `us-east-1`, `eu-west-1`)
-

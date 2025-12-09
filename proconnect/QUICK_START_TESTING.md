@@ -4,24 +4,24 @@
 
 1. Open the `.env` file in your project root
 2. Find this line:
-   ```
+   \`\`\`
    OPENAI_API_KEY=your-openai-api-key-here
-   ```
+   \`\`\`
 3. Replace `your-openai-api-key-here` with your actual OpenAI API key
 4. Save the file
 
 **Example:**
-```
+\`\`\`
 OPENAI_API_KEY=sk-proj-abc123xyz...
-```
+\`\`\`
 
 ## Step 2: Start the Development Server
 
 Open terminal in your project folder and run:
 
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 Wait until you see: `✓ Ready in X seconds`
 
@@ -99,4 +99,3 @@ Wait until you see: `✓ Ready in X seconds`
 ---
 
 **Ready to test!** Start with `npm run dev` and open http://localhost:3000
-

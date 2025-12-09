@@ -21,7 +21,7 @@ In Vercel project settings, add these environment variables:
 
 ### Required Environment Variables
 
-```bash
+\`\`\`bash
 # Database
 DATABASE_URL=postgresql://postgres:[YOUR_PASSWORD]@[YOUR_HOST]:5432/postgres
 
@@ -44,14 +44,14 @@ SMTP_PORT=587
 SMTP_USER=your_email@gmail.com
 SMTP_PASSWORD=your_app_password
 SMTP_FROM=noreply@proconnect.com
-```
+\`\`\`
 
 ### How to Generate NEXTAUTH_SECRET
 
 Run this command in your terminal:
-```bash
+\`\`\`bash
 openssl rand -base64 32
-```
+\`\`\`
 
 Or use an online generator: https://generate-secret.vercel.app/32
 
@@ -67,9 +67,9 @@ Vercel should auto-detect Next.js, but verify these settings:
 ### Custom Build Command (Recommended)
 
 Since we use Prisma, update the build command to:
-```bash
+\`\`\`bash
 prisma generate && npm run build
-```
+\`\`\`
 
 ## Step 4: Database Setup
 
@@ -77,9 +77,9 @@ prisma generate && npm run build
 
 1. Make sure your Supabase database is accessible from the internet
 2. Use the **Connection Pooler URL** (port 6543) for better performance:
-   ```
+   \`\`\`
    postgresql://postgres.zwbvdtflhwcalbfanpyr:[YOUR_PASSWORD]@aws-1-eu-west-3.pooler.supabase.com:6543/postgres
-   ```
+   \`\`\`
 3. URL-encode your password if it contains special characters
 
 ### Run Prisma Migrations
@@ -136,7 +136,7 @@ After deployment, you may need to run migrations. You can do this via:
 
 If you prefer using CLI:
 
-```bash
+\`\`\`bash
 # Install Vercel CLI
 npm i -g vercel
 
@@ -150,7 +150,7 @@ vercel
 vercel env add DATABASE_URL
 vercel env add NEXTAUTH_SECRET
 # ... etc
-```
+\`\`\`
 
 ## Production Optimizations
 
@@ -174,4 +174,3 @@ If you encounter issues:
 2. Check browser console for errors
 3. Verify all environment variables are set
 4. Test database connection separately
-

@@ -36,11 +36,11 @@ The dev server has been restarted. Wait 10-15 seconds for it to fully compile, t
 ## If Still White After These Steps
 
 1. Check if dev server is running:
-   ```bash
+   \`\`\`bash
    # In terminal, you should see:
    # ✓ Ready in X seconds
    # ○ Compiling / ...
-   ```
+   \`\`\`
 
 2. Check browser Network tab (F12 → Network):
    - Look for `globals.css` file
@@ -48,10 +48,10 @@ The dev server has been restarted. Wait 10-15 seconds for it to fully compile, t
    - If it's 404, the CSS isn't being generated
 
 3. Restart dev server manually:
-   ```bash
+   \`\`\`bash
    # Stop: Ctrl+C in terminal
    # Start: npm run dev
-   ```
+   \`\`\`
 
 ## Expected Appearance
 
@@ -60,4 +60,3 @@ The dev server has been restarted. Wait 10-15 seconds for it to fully compile, t
 - **Dashboard**: Dark sidebar, dark cards, blue accents
 
 The app is configured for dark mode by default!
-

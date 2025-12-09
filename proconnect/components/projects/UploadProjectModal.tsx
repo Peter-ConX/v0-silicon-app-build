@@ -203,4 +203,3 @@ export function UploadProjectModal({ open, onClose, onSuccess }: UploadProjectMo
     </Dialog>
   )
 }
-

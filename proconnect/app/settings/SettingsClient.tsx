@@ -280,4 +280,3 @@ export function SettingsClient({ userId }: { userId: string }) {
     </div>
   )
 }
-

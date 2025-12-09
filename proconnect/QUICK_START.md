@@ -24,11 +24,11 @@ I've completed the initial setup steps for ProConnect:
 #### 1. Set Up Database (Required)
 
 **Option A: Using Docker (Easiest)**
-```bash
+\`\`\`bash
 # Install Docker Desktop first, then:
 docker compose up -d
 npm run db:push
-```
+\`\`\`
 
 **Option B: Manual PostgreSQL**
 - Install PostgreSQL
@@ -72,7 +72,7 @@ Once database is set up:
 
 ### 🔧 Common Commands
 
-```bash
+\`\`\`bash
 # Start dev server
 npm run dev
 
@@ -86,7 +86,7 @@ npm run db:studio    # Open Prisma Studio
 docker compose up -d    # Start services
 docker compose down     # Stop services
 docker compose logs     # View logs
-```
+\`\`\`
 
 ### 🎯 Next Steps
 
@@ -121,4 +121,3 @@ docker compose logs     # View logs
 ---
 
 **Happy Coding! 🚀**
-

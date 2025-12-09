@@ -291,4 +291,3 @@ model UserBook {
   @@unique([userId, bookId])
   @@map("user_books")
 }
-

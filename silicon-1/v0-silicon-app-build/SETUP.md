@@ -3,14 +3,14 @@
 ## Quick Start
 
 1. **Install Dependencies**
-   ```bash
+   \`\`\`bash
    npm install
-   ```
+   \`\`\`
 
 2. **Set Up Environment Variables**
-   ```bash
+   \`\`\`bash
    cp .env.example .env
-   ```
+   \`\`\`
    
    Edit `.env` and add your configuration:
    - `DATABASE_URL`: SQLite for development (already set)
@@ -19,15 +19,15 @@
    - Add OAuth and payment gateway keys as needed
 
 3. **Initialize Database**
-   ```bash
+   \`\`\`bash
    npx prisma generate
    npx prisma db push
-   ```
+   \`\`\`
 
 4. **Run Development Server**
-   ```bash
+   \`\`\`bash
    npm run dev
-   ```
+   \`\`\`
 
 5. **Open Browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
@@ -156,7 +156,7 @@ The platform is structured to integrate with:
 
 ## Development Commands
 
-```bash
+\`\`\`bash
 # Run development server
 npm run dev
 
@@ -170,7 +170,7 @@ npm start
 npm run db:push      # Push schema changes
 npm run db:studio    # Open Prisma Studio
 npm run db:generate  # Generate Prisma Client
-```
+\`\`\`
 
 ## Notes
 
@@ -180,4 +180,3 @@ npm run db:generate  # Generate Prisma Client
 - Payment processing is structured but needs actual gateway integration
 - Video URLs are currently expected to be external URLs
 - In production, implement proper file upload and storage
-

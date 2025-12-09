@@ -103,7 +103,7 @@ In Vercel project settings → Environment Variables, add all variables from `.e
 
 ## Quick Deploy Commands (CLI)
 
-```bash
+\`\`\`bash
 # Install Vercel CLI
 npm i -g vercel
 
@@ -121,7 +121,7 @@ vercel env add NEXTAUTH_URL production
 
 # Deploy to production
 vercel --prod
-```
+\`\`\`
 
 ## Production URLs
 
@@ -147,4 +147,3 @@ After deployment, update these:
 3. Set up error monitoring (Sentry, etc.)
 4. Configure CDN for static assets
 5. Set up automated backups for database
-

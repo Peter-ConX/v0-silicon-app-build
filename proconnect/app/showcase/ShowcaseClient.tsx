@@ -192,4 +192,3 @@ export function ShowcaseClient({ initialShowcases, userId }: ShowcaseClientProps
     </>
   )
 }
-

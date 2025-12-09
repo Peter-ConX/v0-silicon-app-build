@@ -16,9 +16,9 @@ Supabase's connection pooler (port 6543) is more reliable than direct connection
 6. Update your `.env` file with this URL
 
 The pooler URL format:
-```
+\`\`\`
 postgresql://postgres.[PROJECT-REF]:[PASSWORD]@aws-0-[REGION].pooler.supabase.com:6543/postgres?pgbouncer=true
-```
+\`\`\`
 
 ## Solution 2: Check IP Restrictions
 
@@ -35,14 +35,14 @@ Supabase might be blocking your IP address:
 Your connection string should look like this:
 
 **For Direct Connection (Port 5432):**
-```
+\`\`\`
 DATABASE_URL="postgresql://postgres:[PASSWORD]@db.zwbvdtflhwcalbfanpyr.supabase.co:5432/postgres?sslmode=require"
-```
+\`\`\`
 
 **For Connection Pooler (Port 6543) - Recommended:**
-```
+\`\`\`
 DATABASE_URL="postgresql://postgres.zwbvdtflhwcalbfanpyr:[PASSWORD]@aws-0-us-east-1.pooler.supabase.com:6543/postgres?pgbouncer=true"
-```
+\`\`\`
 
 ## Solution 4: Test Connection from Supabase Dashboard
 
@@ -69,21 +69,21 @@ Or use the connection string from Supabase dashboard (it handles encoding automa
    - Update `.env` file
 
 2. **Update .env:**
-   ```bash
+   \`\`\`bash
    # Replace with your connection pooler URL
    DATABASE_URL="postgresql://postgres.zwbvdtflhwcalbfanpyr:[PASSWORD]@aws-0-[REGION].pooler.supabase.com:6543/postgres?pgbouncer=true"
-   ```
+   \`\`\`
 
 3. **Test Connection:**
-   ```bash
+   \`\`\`bash
    npm run db:push
-   ```
+   \`\`\`
 
 ## Alternative: Use Supabase CLI
 
 If connection issues persist, you can use Supabase CLI:
 
-```bash
+\`\`\`bash
 # Install Supabase CLI
 npm install -g supabase
 
@@ -95,7 +95,7 @@ supabase link --project-ref zwbvdtflhwcalbfanpyr
 
 # Push schema
 supabase db push
-```
+\`\`\`
 
 ## Still Having Issues?
 
@@ -103,4 +103,3 @@ supabase db push
 2. Verify your project is active in Supabase dashboard
 3. Check your Supabase plan limits
 4. Try connecting from Supabase's SQL Editor to verify database is working
-

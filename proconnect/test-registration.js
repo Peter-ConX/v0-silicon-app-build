@@ -22,4 +22,3 @@ const testRegistration = async () => {
 };
 
 testRegistration();
-

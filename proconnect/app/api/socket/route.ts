@@ -10,4 +10,3 @@ export async function GET() {
     note: 'Socket.IO should be configured separately or integrated with your server setup'
   })
 }
-

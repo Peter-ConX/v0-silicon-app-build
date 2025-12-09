@@ -21,4 +21,3 @@ export function Logo() {
     </div>
   )
 }
-

@@ -11,17 +11,17 @@
 
 ### 1. Clone and Install
 
-```bash
+\`\`\`bash
 npm install
-```
+\`\`\`
 
 ### 2. Environment Variables
 
 Copy `.env.example` to `.env` and fill in your values:
 
-```bash
+\`\`\`bash
 cp .env.example .env
-```
+\`\`\`
 
 Required variables:
 - `DATABASE_URL` - PostgreSQL connection string
@@ -35,29 +35,29 @@ Required variables:
 
 Start PostgreSQL and Redis with Docker:
 
-```bash
+\`\`\`bash
 docker-compose up -d
-```
+\`\`\`
 
 Or use your own PostgreSQL and Redis instances.
 
 Generate Prisma Client:
 
-```bash
+\`\`\`bash
 npm run db:generate
-```
+\`\`\`
 
 Push schema to database:
 
-```bash
+\`\`\`bash
 npm run db:push
-```
+\`\`\`
 
 ### 4. Run Development Server
 
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 Open [http://localhost:3000](http://localhost:3000)
 
@@ -92,10 +92,10 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ### Docker
 
-```bash
+\`\`\`bash
 docker build -t proconnect .
 docker run -p 3000:3000 --env-file .env proconnect
-```
+\`\`\`
 
 ### Railway/Render
 
@@ -107,9 +107,9 @@ docker run -p 3000:3000 --env-file .env proconnect
 
 For production, use migrations:
 
-```bash
+\`\`\`bash
 npm run db:migrate
-```
+\`\`\`
 
 ## Socket.IO Setup
 
@@ -143,4 +143,3 @@ For production, you may want to run Socket.IO as a separate service or integrate
 4. Explore AI features
 5. Share code snippets
 6. Build your network!
-

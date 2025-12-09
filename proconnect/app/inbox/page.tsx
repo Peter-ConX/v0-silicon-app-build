@@ -223,4 +223,3 @@ export default async function InboxPage() {
     </div>
   )
 }
-

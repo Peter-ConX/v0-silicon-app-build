@@ -24,31 +24,31 @@ A world-class networking platform built specifically for tech-savvy people inclu
 
 1. Clone the repository
 2. Install dependencies:
-```bash
+\`\`\`bash
 npm install
-```
+\`\`\`
 
 3. Set up environment variables:
-```bash
+\`\`\`bash
 cp .env.example .env
 # Edit .env with your configuration
-```
+\`\`\`
 
 4. Start Docker services (PostgreSQL and Redis):
-```bash
+\`\`\`bash
 docker-compose up -d
-```
+\`\`\`
 
 5. Set up the database:
-```bash
+\`\`\`bash
 npm run db:generate
 npm run db:push
-```
+\`\`\`
 
 6. Run the development server:
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
@@ -56,9 +56,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 The project includes Docker Compose configuration for PostgreSQL and Redis. Start them with:
 
-```bash
+\`\`\`bash
 docker-compose up -d
-```
+\`\`\`
 
 ## 📝 Scripts
 
@@ -77,4 +77,3 @@ See `.env.example` for all required environment variables.
 ## 📄 License
 
 MIT
-

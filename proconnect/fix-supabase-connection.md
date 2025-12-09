@@ -20,15 +20,15 @@
    - Make sure to replace `[YOUR-PASSWORD]` with your actual database password
 
 4. **Save and Test:**
-   ```bash
+   \`\`\`bash
    npm run db:push
-   ```
+   \`\`\`
 
 ## Example Connection Pooler URL Format
 
-```
+\`\`\`
 postgresql://postgres.zwbvdtflhwcalbfanpyr:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.supabase.com:6543/postgres?pgbouncer=true
-```
+\`\`\`
 
 **Important:** Use the connection pooler URL (port 6543), not the direct connection (port 5432).
 
@@ -40,4 +40,3 @@ postgresql://postgres.zwbvdtflhwcalbfanpyr:[YOUR-PASSWORD]@aws-0-us-east-1.poole
 - Recommended by Supabase for applications
 
 After updating, run `npm run db:push` again!
-

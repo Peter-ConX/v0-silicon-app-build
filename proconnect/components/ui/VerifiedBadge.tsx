@@ -50,4 +50,3 @@ export function VerifiedBadge({ type, className }: VerifiedBadgeProps) {
     </span>
   )
 }
-

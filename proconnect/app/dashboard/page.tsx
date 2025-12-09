@@ -227,4 +227,3 @@ export default async function DashboardPage() {
     </DashboardLayout>
   )
 }
-

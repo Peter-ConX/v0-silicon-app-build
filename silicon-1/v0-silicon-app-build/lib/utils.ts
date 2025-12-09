@@ -36,4 +36,3 @@ export function extractKeywords(query: string): string[] {
     .filter(word => word.length > 2 && !stopWords.has(word))
     .map(word => word.replace(/[^\w]/g, ''))
 }
-

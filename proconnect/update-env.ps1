@@ -28,4 +28,3 @@ Write-Host "`nIf this doesn't work, you'll need to use Connection Pooler:" -Fore
 Write-Host "1. Go to Supabase Dashboard → Settings → Database" -ForegroundColor White
 Write-Host "2. Get Connection Pooler URL (port 6543)" -ForegroundColor White
 Write-Host "3. Update DATABASE_URL in .env" -ForegroundColor White
-

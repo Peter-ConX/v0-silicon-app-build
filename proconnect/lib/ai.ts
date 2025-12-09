@@ -31,4 +31,3 @@ export async function generateCareerAdvice(skills: string[], goals?: string): Pr
   return `Based on your skills in ${skills.join(', ')}, consider exploring advanced topics 
   in these areas and contributing to open-source projects.`
 }
-

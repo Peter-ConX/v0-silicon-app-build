@@ -7,4 +7,3 @@ export function getSocketUrl(): string {
   }
   return process.env.NEXT_PUBLIC_SOCKET_URL || window.location.origin
 }
-

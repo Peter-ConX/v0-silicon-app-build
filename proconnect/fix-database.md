@@ -8,7 +8,7 @@ The `npm run db:push` command is hanging or taking too long.
 ### Option 1: Use Prisma Migrate (Recommended)
 Instead of `db:push`, use migrations which are more reliable:
 
-```bash
+\`\`\`bash
 # Create a migration
 npm run db:migrate -- --name add_zeets
 
@@ -16,7 +16,7 @@ npm run db:migrate -- --name add_zeets
 # 1. Create migration files
 # 2. Apply them to database
 # 3. Generate Prisma Client
-```
+\`\`\`
 
 ### Option 2: Check Connection String
 The connection pooler might be timing out. Try:
@@ -46,13 +46,12 @@ If push keeps failing, you can:
 ## Quick Fix
 Try stopping the current process (Ctrl+C) and run:
 
-```bash
+\`\`\`bash
 # Generate Prisma Client first
 npm run db:generate
 
 # Then try push again with timeout
 npm run db:push -- --skip-generate
-```
+\`\`\`
 
 If it still hangs, the connection pooler might be having issues. Try the migration approach instead.
-

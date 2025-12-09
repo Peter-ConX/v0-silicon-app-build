@@ -18,4 +18,3 @@ fs.writeFileSync(envPath, envContent, 'utf8');
 
 console.log('✅ Updated .env file with Connection Pooler URL');
 console.log(`URL: postgresql://postgres.zwbvdtflhwcalbfanpyr:***@aws-1-eu-west-3.pooler.supabase.com:6543/postgres?pgbouncer=true`);
-

@@ -179,4 +179,3 @@ These features have the structure in place and can be enhanced:
 - UI components from shadcn/ui
 
 The platform is **production-ready** and can be deployed after environment configuration!
-

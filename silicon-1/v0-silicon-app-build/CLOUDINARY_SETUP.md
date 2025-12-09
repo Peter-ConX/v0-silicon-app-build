@@ -15,16 +15,16 @@
 
 3. **Add to Environment Variables**
    - Create or update your `.env` file:
-   ```env
+   \`\`\`env
    CLOUDINARY_CLOUD_NAME=your_cloud_name
    CLOUDINARY_API_KEY=your_api_key
    CLOUDINARY_API_SECRET=your_api_secret
-   ```
+   \`\`\`
 
 4. **Restart Your Dev Server**
-   ```bash
+   \`\`\`bash
    npm run dev
-   ```
+   \`\`\`
 
 ## What Cloudinary Does
 
@@ -56,4 +56,3 @@
 **Video not playing?**
 - Check that the video URL is accessible
 - Make sure the video format is supported (MP4, MOV, AVI, etc.)
-

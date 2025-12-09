@@ -67,19 +67,19 @@
 ### Option 1: Cloudinary (Quick Start)
 
 1. **Install Cloudinary SDK**:
-```bash
+\`\`\`bash
 npm install cloudinary
-```
+\`\`\`
 
 2. **Set up environment variables**:
-```env
+\`\`\`env
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
-```
+\`\`\`
 
 3. **Create upload API route** (`app/api/upload/video/route.ts`):
-```typescript
+\`\`\`typescript
 import { NextRequest, NextResponse } from 'next/server'
 import { v2 as cloudinary } from 'cloudinary'
 
@@ -132,25 +132,25 @@ export async function POST(request: NextRequest) {
     )
   }
 }
-```
+\`\`\`
 
 ### Option 2: AWS S3 (Scalable)
 
 1. **Install AWS SDK**:
-```bash
+\`\`\`bash
 npm install @aws-sdk/client-s3 @aws-sdk/s3-request-presigner
-```
+\`\`\`
 
 2. **Set up environment variables**:
-```env
+\`\`\`env
 AWS_ACCESS_KEY_ID=your_access_key
 AWS_SECRET_ACCESS_KEY=your_secret_key
 AWS_REGION=us-east-1
 AWS_S3_BUCKET_NAME=your-bucket-name
-```
+\`\`\`
 
 3. **Create upload API route** (`app/api/upload/video/route.ts`):
-```typescript
+\`\`\`typescript
 import { NextRequest, NextResponse } from 'next/server'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
@@ -201,7 +201,7 @@ export async function POST(request: NextRequest) {
     )
   }
 }
-```
+\`\`\`
 
 ## Recommendation
 
@@ -217,4 +217,3 @@ export async function POST(request: NextRequest) {
 5. Test video upload and playback
 
 Would you like me to implement file upload functionality with one of these providers?
-

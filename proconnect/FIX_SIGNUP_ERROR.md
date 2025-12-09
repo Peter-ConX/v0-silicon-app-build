@@ -16,7 +16,7 @@ Instead of using Prisma commands that hang, use Supabase's built-in SQL editor:
 
 Copy and paste this SQL into the editor, then click **Run**:
 
-```sql
+\`\`\`sql
 -- Create Users table
 CREATE TABLE IF NOT EXISTS "users" (
     "id" TEXT NOT NULL,
@@ -101,7 +101,7 @@ ALTER TABLE "zeets" ADD CONSTRAINT "zeets_authorId_fkey" FOREIGN KEY ("authorId"
 ALTER TABLE "zeets" ADD CONSTRAINT "zeets_replyToId_fkey" FOREIGN KEY ("replyToId") REFERENCES "zeets"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 ALTER TABLE "zeet_likes" ADD CONSTRAINT "zeet_likes_userId_fkey" FOREIGN KEY ("userId") REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE "zeet_likes" ADD CONSTRAINT "zeet_likes_zeetId_fkey" FOREIGN KEY ("zeetId") REFERENCES "zeets"("id") ON DELETE CASCADE ON UPDATE CASCADE;
-```
+\`\`\`
 
 ### Step 3: Verify Tables Created
 After running the SQL, check the **Table Editor** in Supabase to see if the tables were created.
@@ -118,8 +118,7 @@ After running the SQL, check the **Table Editor** in Supabase to see if the tabl
 
 ## Alternative: Use Prisma Studio
 If you want to verify tables later:
-```bash
+\`\`\`bash
 npm run db:studio
-```
+\`\`\`
 This opens a visual database browser.
-

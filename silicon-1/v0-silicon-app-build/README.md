@@ -64,23 +64,23 @@ A full-stack social entertainment platform built with Next.js, featuring video c
 ### Installation
 
 1. Clone the repository:
-```bash
+\`\`\`bash
 git clone <repository-url>
 cd v0-silicon-app-build
-```
+\`\`\`
 
 2. Install dependencies:
-```bash
+\`\`\`bash
 npm install
-```
+\`\`\`
 
 3. Set up environment variables:
-```bash
+\`\`\`bash
 cp .env.example .env
-```
+\`\`\`
 
 Edit `.env` and add your configuration:
-```
+\`\`\`
 DATABASE_URL="file:./dev.db"
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=your-secret-key-here
@@ -88,24 +88,24 @@ GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 PAYSTACK_PUBLIC_KEY=your-paystack-key
 STRIPE_PUBLIC_KEY=your-stripe-key
-```
+\`\`\`
 
 4. Set up the database:
-```bash
+\`\`\`bash
 npx prisma generate
 npx prisma db push
-```
+\`\`\`
 
 5. Run the development server:
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
-```
+\`\`\`
 ├── app/                    # Next.js app directory
 │   ├── api/               # API routes
 │   ├── monetization/      # Monetization pages
@@ -121,7 +121,7 @@ npm run dev
 ├── hooks/                # Custom React hooks
 ├── prisma/               # Database schema
 └── public/               # Static assets
-```
+\`\`\`
 
 ## Database Schema
 
@@ -172,7 +172,7 @@ The platform is set up to integrate with:
 ## Development
 
 ### Database Management
-```bash
+\`\`\`bash
 # View database in Prisma Studio
 npm run db:studio
 
@@ -181,13 +181,13 @@ npm run db:push
 
 # Generate Prisma Client
 npm run db:generate
-```
+\`\`\`
 
 ### Building for Production
-```bash
+\`\`\`bash
 npm run build
 npm start
-```
+\`\`\`
 
 ## License
 
@@ -196,4 +196,3 @@ This project is proprietary software.
 ## Support
 
 For issues and questions, please contact the development team.
-

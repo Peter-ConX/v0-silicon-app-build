@@ -10,14 +10,14 @@ The registration API is returning a 500 error. This is likely because Prisma Cli
 2. Press `Ctrl+C` to stop it
 
 ### Step 2: Regenerate Prisma Client
-```bash
+\`\`\`bash
 npm run db:generate
-```
+\`\`\`
 
 ### Step 3: Restart Dev Server
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 ### Step 4: Check Server Logs
 When you try to signup, check the terminal where `npm run dev` is running. You should now see detailed error messages that will tell us exactly what's wrong.
@@ -39,4 +39,3 @@ These will show the actual problem.
 ## Next Steps
 
 After regenerating Prisma Client, try signing up again. If it still fails, share the error message from the terminal.
-

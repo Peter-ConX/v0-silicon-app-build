@@ -5,7 +5,7 @@ ProConnect is a full-stack networking platform built with Next.js 14, TypeScript
 
 ## Directory Structure
 
-```
+\`\`\`
 proconnect/
 ├── app/                          # Next.js 14 App Router
 │   ├── api/                      # API routes
@@ -58,7 +58,7 @@ proconnect/
 ├── tailwind.config.ts             # Tailwind CSS configuration
 ├── tsconfig.json                  # TypeScript configuration
 └── README.md                      # Project documentation
-```
+\`\`\`
 
 ## Key Features
 
@@ -107,4 +107,3 @@ The project is configured for deployment on:
 - Any platform supporting Docker
 
 See `Dockerfile` and `docker-compose.yml` for containerization setup.
-

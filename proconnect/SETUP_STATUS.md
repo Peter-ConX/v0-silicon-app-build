@@ -15,33 +15,33 @@ The database connection failed because PostgreSQL is not running. You have three
 #### Option 1: Install Docker (Recommended)
 1. Install Docker Desktop for Windows: https://www.docker.com/products/docker-desktop
 2. Once installed, run:
-   ```bash
+   \`\`\`bash
    docker compose up -d
-   ```
+   \`\`\`
 3. Then run:
-   ```bash
+   \`\`\`bash
    npm run db:push
-   ```
+   \`\`\`
 
 #### Option 2: Install PostgreSQL Manually
 1. Download PostgreSQL: https://www.postgresql.org/download/windows/
 2. Install and create a database named `proconnect`
 3. Update `.env` with your PostgreSQL credentials:
-   ```
+   \`\`\`
    DATABASE_URL="postgresql://your_user:your_password@localhost:5432/proconnect?schema=public"
-   ```
+   \`\`\`
 4. Run:
-   ```bash
+   \`\`\`bash
    npm run db:push
-   ```
+   \`\`\`
 
 #### Option 3: Use Cloud Database
 - Use services like Supabase, Railway, or Neon
 - Update `DATABASE_URL` in `.env` with your cloud database URL
 - Run:
-   ```bash
+   \`\`\`bash
    npm run db:push
-   ```
+   \`\`\`
 
 ### Redis Setup (Optional for now)
 
@@ -55,14 +55,14 @@ Redis is used for presence tracking and caching. You can:
 Once your database is running:
 
 1. **Push Database Schema:**
-   ```bash
+   \`\`\`bash
    npm run db:push
-   ```
+   \`\`\`
 
 2. **Start Development Server:**
-   ```bash
+   \`\`\`bash
    npm run dev
-   ```
+   \`\`\`
 
 3. **Access the Application:**
    - Open http://localhost:3000 in your browser
@@ -92,7 +92,7 @@ To enable OAuth login (GitHub, Google, Twitter), you'll need to:
 
 ## 🎯 Quick Start (After Database)
 
-```bash
+\`\`\`bash
 # 1. Start database (Docker)
 docker compose up -d
 
@@ -101,7 +101,6 @@ npm run db:push
 
 # 3. Start dev server
 npm run dev
-```
+\`\`\`
 
 Then visit http://localhost:3000
-

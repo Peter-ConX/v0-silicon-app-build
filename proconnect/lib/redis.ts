@@ -21,4 +21,3 @@ export async function getUserPresence(userId: string): Promise<'online' | 'offli
 export async function refreshUserPresence(userId: string) {
   await redis.setex(`presence:${userId}`, 300, 'online')
 }
-

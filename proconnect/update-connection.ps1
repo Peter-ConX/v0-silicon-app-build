@@ -30,4 +30,3 @@ if ($region) {
 } else {
     Write-Host "`nNo region provided. Please get the connection string from Supabase dashboard." -ForegroundColor Red
 }
-

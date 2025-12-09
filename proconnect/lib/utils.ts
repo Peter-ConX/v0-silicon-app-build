@@ -29,4 +29,3 @@ export function formatRelativeTime(date: Date | string): string {
   if (days < 7) return `${days}d ago`
   return formatDate(d)
 }
-
